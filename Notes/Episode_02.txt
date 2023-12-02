@@ -1,0 +1,75 @@
+npm -> all packages are hoisted over here, all the library or all the utilities available over here
+when you create-react-app it automatically has npm in it.
+
+what is package.json file 
+this file basically configuration for our npm.
+
+why do we need this file ? 
+this packages are known as dependencies.
+
+npm will take care of what is the version of that packages
+it will take care this in the package.json
+
+most important package - bundler 
+what is this bundler ? 
+html , css , js need to be compressed, cleaned etc..
+bundler helpes you to do all these things.
+webpack , parser, vit these are bundlers , it bundles your app so it can go to production.
+
+create-react-app using webpack bundler behind the scene.
+
+in our project we are going to use parser. at the end of day all bundlers are same they do all same things.
+
+parser is one of the best library we are going to use.
+this will ignite our app drastically. 
+
+npm install -D parcel
+
+there are 2 types of dependencies 
+1.dev-depe..
+2.normal-depe.. 
+
+what is dev-dep.. 
+generally requried in development phase
+
+what is normal-dep..
+used in production also. 
+
+this is the basic difference.
+
+here we are installing parcel as dev-dep.. that's why -D
+
+you can see your deve-dependencies inside package.json 
+
+node modules fetches all the code of dependencies, now we can use that code. 
+
+there are lots of module install why? parcel has it's own dependencies. transitive dependencies
+
+don't put those things which you can generate 
+
+only put those things into git which is really important
+
+npm does not stands for node package manager 
+
+what parcel did?
+npx-parcel index.html -> npx means executing package 
+
+
+another way to get react app into our app is npm at the end of day react is just a package
+
+cdn links is not a prefered way to bring react and reactDOM into your project.
+
+fetching from cdn itself is a constly operation. because it makes network call 
+it's better to have react inside your node module so you can access it very easily without any network call
+
+what is network ip changes you have to change the url also. 
+
+it is easy to maintain the react inside the module.
+
+when you write npx parcel index.html - it will generate development build and it stores files inside dist folder 
+
+when you write npx parcel build index.html - production build 
+
+production build is highly optimised. 
+
+this parce-cache and dist file can be regenerated. 
