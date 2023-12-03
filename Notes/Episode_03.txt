@@ -1,0 +1,90 @@
+you can add your script to the packge.json 
+"start" : parcel index.html
+"build" : build parcel index.html
+
+
+this is industry standard to use these scripts to build the project. 
+
+React element -> equivalent to dom elements 
+
+React.createElement -> creates an object 
+when you render this element into the dom it becomes an html element. 
+
+above createElement is core react, but it is not a good way to create element like this
+it becomes difficult to create nested structures 
+to help the developer community, fb developer creates something known as jsx
+
+jsx -> javascript syntax which is easier to create elements
+
+jsx is not the part of react. jsx is different that react
+
+fundamental difference -> 
+
+we can write react without using jsx also. but jsx makes our developer life easy.
+
+we used to write markup inside html, style in css and logic in js 
+react tryis to merge this things up. so that things can be done in one file
+jsx is a convention where we can merge these html and css togather. 
+
+
+now how can we create element using jsx
+const jsxHeading = <h1>Namaste React using JSX 🚀</h1>;
+
+jsx is not html inside javascript. jsx is not html  *** 
+jsx is a html like syntax. it looks like xml or html but it is not. 
+jsx is jsx it's all different syntax. 
+
+jsxHeading is react object. 
+
+
+const jsxHeading = <h1 id="heading">Namaste React using JSX 🚀</h1>;
+does above code is valid js code? no it is not , this is not pure js
+
+js does not come up with this understanding of jsx. 
+js engine can not understand the above code. it understands ecma script. es6
+then how the above code is working perfectly.
+
+again parcelllllllllll..... doing it's job behind the scene.
+
+even before the whole code goes to the browser. or js engine it is transpiled before
+
+so js engine receives the code that browser can understand.
+
+who is transpiling this code -> parcel 
+parcel is like manager for you, it does not do all the jobs by himself.
+it gives this responsibility to babel. 
+
+it is babel's job to convert jsx to react-element 
+
+babel is not created by facebook. it's job jsx code -> react code. 
+
+jsx is html like syntax but not html 
+
+if you want to write jsx with multiple lines you have to wrap it brackets.
+
+Component---------------------------
+
+
+what is component -> 2 types: 
+1) Class based component -> Older way of writing code
+2) Functional Component -> New way of writing code 99.9999 new developers write functional component
+
+defination -> just a noraml js function 😂😂
+
+
+component composition is composition of two or more component into one component.
+
+you can also write normal function with function keyword instead of arrow function.
+
+
+superpower of jsx -> in jsx file if you write curly braces {} here you can run any peice of js code
+
+
+
+
+
+Homework:
+
+explore the attributes you can provide to the jsx. how it is applied explore it.
+
+

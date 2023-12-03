@@ -1,21 +1,35 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-const heading = React.createElement(
-  "h1",
-  { id: "heading", xyz: "temp" }, // attributes
-  "Abhishek Rathod"
-);
-console.log(heading);
 
+// React element using JSX.
+
+// jsx => babel  transpiles it to React.CreateElement => ReactElement -> js Object => Html element (render)
+const TitleComponent = () => {
+  return (
+    <h1 id="heading" className="heading">
+      Namaste React using JSX 🚀
+    </h1>
+  );
+};
+
+const title = <h1>Title : React element</h1>;
+// React Component is normal js function which returns some jsx ( react element )
+// React element is jsx ( object )
+
+const number = 1000;
+const HeadingComponent = () => {
+  return (
+    <div className="container">
+      <TitleComponent />
+      {TitleComponent()}
+      <TitleComponent></TitleComponent>
+      {title}
+
+      {console.log("console.log from jsx")}
+      {number}
+      <h1 id="heading">Namaste React Functional Component {number}</h1>
+    </div>
+  );
+};
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
-const children = React.createElement("div", { id: "child" }, "Abhishek");
-const children2 = React.createElement("div", { id: "child2" }, "children2");
-const parent = React.createElement("div", { id: "parent" }, [
-  children,
-  children2,
-]);
-
-root.render(parent);
-
-// how to create nested structure.
+root.render(<HeadingComponent />);
