@@ -13,8 +13,6 @@ const TitleComponent = () => {
 };
 
 const title = <h1>Title : React element</h1>;
-// React Component is normal js function which returns some jsx ( react element )
-// React element is jsx ( object )
 
 const number = 1000;
 const HeadingComponent = () => {
