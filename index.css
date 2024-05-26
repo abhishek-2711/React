@@ -4,6 +4,66 @@
     box-sizing: border-box;
 }
 
-#heading {
-    color: red;
+
+/* Header Component */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+
+.logo {
+    width: 100px;
+    border-radius: 100%;
+}
+
+.nav-items {
+    margin-top: 20px;
+    padding-right: 100px;
+}
+
+.nav-items > ul {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    list-style-type: none;
+    font-size: 1.2rem;
+}
+
+.nav-items > ul > li {
+    cursor: pointer;
+}
+
+
+
+.search {
+    padding: 10px;
+}
+
+
+/* card component */
+
+.res-container {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-left: 20px;
+}
+
+.res-card {
+    width: 200px;
+    height: 400px;
+}
+
+
+.res-card:hover {
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.res-image {
+    width: 190px;
+    height: 150px;
 }
