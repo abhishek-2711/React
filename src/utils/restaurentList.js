@@ -1,4 +1,4 @@
-export const restaurents = [
+export let restaurents = [
   {
     info: {
       id: "47589",
