@@ -35,6 +35,12 @@
     cursor: pointer;
 }
 
+.filter {
+    margin: 20px;
+    display: flex;
+    gap: 20px;
+}
+
 
 
 .search {
@@ -44,7 +50,7 @@
 
 /* card component */
 
-.res-container {
+.res-container,.shimmer-container{
     display: flex;
     justify-content: start;
     flex-wrap: wrap;
@@ -69,6 +75,19 @@
 }
 
 .filter-btn {
-    padding: 10px;
-    margin: 10px;
+    /* padding: 10px;
+    margin: 10px; */
+}
+
+.shimmer-card {
+    width: 200px;
+    height: 400px;
+    background-color: #f0f0f0;
+}
+
+.login-btn {
+    width: 100px;
+    background: green;
+    border-radius: 10px;
+    height: 25px;
 }
