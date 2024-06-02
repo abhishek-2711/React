@@ -1,5 +1,4 @@
 import RestaurentCard from "./RestaurentCard";
-import { restaurents } from "../utils/restaurentList";
 import { useEffect, useState } from "react";
 import { Shimmer } from "./Shimmer";
 import { Link } from "react-router-dom";

@@ -14,3 +14,14 @@
     2-server side routing -  realod whole page because of network call made for fetching data
 
 
+# Optimizing our app
+
+    - single responsibility principle
+    - modulairty - break down code into different chunks so that your code can be testable. 
+    - you can write test cases better if you have modularity in your code. 
+    - hook - utility function 
+    - take out some responsiblity from function and put it into custom hook 
+    - Lazy Loading, dynamic bundling, on demand loading, code splitting, chunking -> all refers to same process
+    - 
+
+

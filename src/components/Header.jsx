@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { LOGO_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const styleCard = {
   backgroundColor: "#f0f0f0",
@@ -11,12 +12,7 @@ const styleCard = {
 export default Header = () => {
   const [btnName, setBtnName] = useState("Login");
 
-  // useEffect() will be called everytime if no dependency array (default behaviour)
-  // useEffect() will be called once if we provide [] dependency array
-  // useEffect() will
-  useEffect(() => {
-    console.log("useEffect() called");
-  }, []);
+  const onlineStatus = useOnlineStatus();
 
   console.log("header rendered");
   return (
@@ -27,6 +23,7 @@ export default Header = () => {
 
       <div className="nav-items">
         <ul>
+          <li>Online Status: {onlineStatus ? "🟢" : "🔴"}</li>
           <li>
             <Link to="/">Home</Link>
           </li>
@@ -35,6 +32,9 @@ export default Header = () => {
           </li>
           <li>
             <Link to="/contact">Contact Us</Link>
+          </li>
+          <li>
+            <Link to="/groccery">Groccery</Link>
           </li>
           <button
             className="login-btn"
