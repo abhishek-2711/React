@@ -1,4 +1,4 @@
-import RestaurentCard from "./RestaurentCard";
+import RestaurentCard, { withPromotedRestaurent } from "./RestaurentCard";
 import { useEffect, useState } from "react";
 import { Shimmer } from "./Shimmer";
 import { Link } from "react-router-dom";
@@ -9,6 +9,8 @@ export default Body = () => {
   const [copyListOfRestaurents, setCopyListOfRestaurents] = useState([]);
 
   const [searchText, setSearchText] = useState("");
+
+  const PromotedRestaurent = withPromotedRestaurent(RestaurentCard);
 
   useEffect(() => {
     fetchData();
@@ -48,7 +50,7 @@ export default Body = () => {
   return listOfRestaurents.length === 0 ? (
     <Shimmer />
   ) : (
-    <div className="mt-5">
+    <div className="mt-24">
       {/* <div className="search">Search</div> */}
       <div className="flex mb-5 align-middle justify-center">
         <div className="mr-6">
@@ -86,7 +88,11 @@ export default Body = () => {
             to={"restaurents/" + restaurent.info.id}
             key={restaurent.info.id}
           >
-            <RestaurentCard restaurent={restaurent} />
+            {restaurent.info.isOpen ? (
+              <PromotedRestaurent restaurent={restaurent} />
+            ) : (
+              <RestaurentCard restaurent={restaurent} />
+            )}
           </Link>
         ))}
       </div>

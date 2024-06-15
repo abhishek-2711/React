@@ -16,7 +16,7 @@ export default Header = () => {
 
   console.log("header rendered");
   return (
-    <div className="flex justify-between bg-blue-300 h-20">
+    <div className="flex justify-between bg-blue-300 h-20 fixed top-0 left-0 w-full  shadow-2xl z-10">
       <div className="">
         <img className="h-20 rounded-e-full" src={LOGO_URL} alt="" />
       </div>
