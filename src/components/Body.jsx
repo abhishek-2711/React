@@ -48,21 +48,22 @@ export default Body = () => {
   return listOfRestaurents.length === 0 ? (
     <Shimmer />
   ) : (
-    <div className="body">
+    <div className="mt-5">
       {/* <div className="search">Search</div> */}
-      <div className="filter">
-        <div>
+      <div className="flex mb-5 align-middle justify-center">
+        <div className="mr-6">
           <input
             type="text"
             name=""
-            id=""
+            id="search"
             value={searchText}
             onChange={(e) => {
               setSearchText(e.target.value);
             }}
+            className="border border-black pl-1 rounded-lg"
           />
           <button
-            className="search-btn"
+            className="w-20 bg-blue-400 border border-black rounded-lg hover:text-white"
             onClick={() => {
               searchRestaurents();
             }}
@@ -71,7 +72,7 @@ export default Body = () => {
           </button>
         </div>
         <button
-          className="filter-btn"
+          className="w-60 bg-blue-400 rounded-lg border-black hover:text-white"
           onClick={() => {
             getTopRatedRestaurants();
           }}
@@ -79,7 +80,7 @@ export default Body = () => {
           Top Rated Restaurants
         </button>
       </div>
-      <div className="res-container">
+      <div className="flex flex-wrap gap-16 justify-around">
         {listOfRestaurents.map((restaurent) => (
           <Link
             to={"restaurents/" + restaurent.info.id}

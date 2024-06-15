@@ -16,28 +16,30 @@ export default Header = () => {
 
   console.log("header rendered");
   return (
-    <div className="header" style={styleCard}>
-      <div className="logo-container">
-        <img className="logo" src={LOGO_URL} alt="" />
+    <div className="flex justify-between bg-blue-300 h-20">
+      <div className="">
+        <img className="h-20 rounded-e-full" src={LOGO_URL} alt="" />
       </div>
 
-      <div className="nav-items">
-        <ul>
-          <li>Online Status: {onlineStatus ? "🟢" : "🔴"}</li>
-          <li>
+      <div className="my-auto px-8">
+        <ul className="flex gap-5">
+          <li className="hover:cursor-pointer hover:text-white">
+            Online Status: {onlineStatus ? "🟢" : "🔴"}
+          </li>
+          <li className="hover:cursor-pointer hover:text-white">
             <Link to="/">Home</Link>
           </li>
-          <li>
+          <li className="hover:cursor-pointer hover:text-white">
             <Link to="/about">About Us</Link>
           </li>
-          <li>
+          <li className="hover:cursor-pointer hover:text-white">
             <Link to="/contact">Contact Us</Link>
           </li>
-          <li>
+          <li className="hover:cursor-pointer hover:text-white">
             <Link to="/groccery">Groccery</Link>
           </li>
           <button
-            className="login-btn"
+            className="hover:cursor-pointer hover:text-white border border-black w-36 bg-blue-600 rounded-lg"
             onClick={() => {
               setBtnName(btnName === "Login" ? "Logout" : "Login");
             }}

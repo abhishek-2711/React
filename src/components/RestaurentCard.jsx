@@ -9,13 +9,13 @@ export default RestaurentCard = (props) => {
   const { deliveryTime } = sla;
 
   return (
-    <div className="res-card">
+    <div className="res-card w-60 min-h-96 border border-blue-100 bg-slate-100 hover:bg-slate-200 rounded-2xl">
       <img
-        className="res-image"
+        className="w-full max-h-64 px-4 my-4"
         src={CDN_URL + restaurentInfo.cloudinaryImageId}
         alt=""
       />
-      <h3>{name}</h3>
+      <h3 className="font-bold">{name}</h3>
       <h3>{cuisines.join(", ")}</h3>
       <h4>{avgRating}</h4>
       <h4> {costForTwo}</h4>

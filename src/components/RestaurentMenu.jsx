@@ -15,8 +15,8 @@ const RestaurentMenu = () => {
   return !resInfo ? (
     <Shimmer />
   ) : (
-    <div className="menu">
-      <h2>{name}</h2>
+    <div className="flex flex-col gap-4 items-center border border-black w-96 mx-auto my-24 h-96 bg-slate-200 rounded-3xl">
+      <h2 className="font-bold">{name}</h2>
       <p>
         {cuisines.join(",")} - {costForTwo}
       </p>
